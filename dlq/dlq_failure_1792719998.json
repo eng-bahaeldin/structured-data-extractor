@@ -1,0 +1,11 @@
+{
+  "timestamp": 1792719998,
+  "raw_input_snippet": "<Html>\n",
+  "failed_payload": {},
+  "error_trace": [
+    "Stage 1 Ingestion Failure: Error code: 401 - {'error': {'message': 'Incorrect API key provided: AQ.Ab8RN*****************************************8fbQ. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}",
+    "Attempt 2 Exception: Error code: 401 - {'error': {'message': 'Incorrect API key provided: AQ.Ab8RN*****************************************8fbQ. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}",
+    "Attempt 3 Exception: Error code: 401 - {'error': {'message': 'Incorrect API key provided: AQ.Ab8RN*****************************************8fbQ. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+  ],
+  "status": "UNRESOLVED_DLQ"
+}

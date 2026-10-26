@@ -1,0 +1,10 @@
+{
+  "timestamp": 1792719028,
+  "raw_input_snippet": "Corrupted unparseable scan",
+  "failed_payload": {},
+  "error_trace": [
+    "Stage 1 Ingestion Failure: Terminal Failure",
+    "Attempt 2 Exception: Reflection Exhausted"
+  ],
+  "status": "UNRESOLVED_DLQ"
+}

@@ -1,0 +1,40 @@
+{
+  "timestamp": 1792726870,
+  "raw_input_snippet": "======================================================================\nNORTHWEST INDUSTRIAL AUTOMATION & HARDWARE LLC\nINVOICE #: NW-2026-8841\nISSUE DATE: October 14, 2026\nCURRENCY: USD ($)\n----------------------------------------------------------------------\nBILLABLE ITEMS:\n1. High-Torque NEMA Stepper Motor (24V)\n   Qty: 3 | Unit Rate: $45.00 | Net Total: $135.00\n2. Optical Rotary Encoder Module\n   Qty: 2 | Unit Rate: $22.50 | Net Total: $45.00\n3. Solid-Core Wire Harness Spool (50m)\n   Qty: 4 | Unit Rate: $12.50 | Net Total: $50.00\n----------------------------------------------------------------------\nSUMMARY CHARGES (AS PRINTED ON VENDOR SCAN):\nReported Subtotal:       $230.00\nState Sales Tax (8.5%):  $ 19.55\nPrinted Invoice Total:   $310.00   <-- Intentional discrepancy ($60.45 phantom charge)\n======================================================================",
+  "failed_payload": {
+    "invoice_number": "NW-2026-8841",
+    "issue_date": "2026-10-14",
+    "vendor_name": "NORTHWEST INDUSTRIAL AUTOMATION & HARDWARE LLC",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "High-Torque NEMA Stepper Motor (24V)",
+        "quantity": 3,
+        "unit_price": 45.0,
+        "line_total": 135.0
+      },
+      {
+        "description": "Optical Rotary Encoder Module",
+        "quantity": 2,
+        "unit_price": 22.5,
+        "line_total": 45.0
+      },
+      {
+        "description": "Solid-Core Wire Harness Spool (50m)",
+        "quantity": 4,
+        "unit_price": 12.5,
+        "line_total": 50.0
+      }
+    ],
+    "subtotal": 230.0,
+    "tax_amount": 19.55,
+    "total_amount": 249.55
+  },
+  "error_trace": [
+    "Stage 1 Validation Failure:\n\u2022 Location: [properties -> line_items -> items -> properties -> quantity -> exclusiveMinimum] | Issue: Extra inputs are not permitted | Provided Value: 0\n\u2022 Location: [properties -> line_items -> items -> properties -> unit_price -> exclusiveMinimum] | Issue: Extra inputs are not permitted | Provided Value: 0.0\n\u2022 Location: [properties -> line_items -> items -> properties -> line_total -> exclusiveMinimum] | Issue: Extra inputs are not permitted | Provided Value: 0.0\n\u2022 Location: [properties -> total_amount -> exclusiveMinimum] | Issue: Extra inputs are not permitted | Provided Value: 0.0",
+    "Attempt 2 Validation Failed:\n\u2022 Location: [invoice_date] | Issue: Field required | Provided Value: {'invoice_number': 'NW-2026-8841', 'issue_date': '2026-10-14', 'vendor_name': 'NORTHWEST INDUSTRIAL AUTOMATION & HARDWARE LLC', 'currency': 'USD', 'line_items': [{'description': 'High-Torque NEMA Stepper Motor (24V)', 'quantity': 3, 'unit_price': 45.0, 'line_total': 135.0}, {'description': 'Optical Rotary Encoder Module', 'quantity': 2, 'unit_price': 22.5, 'line_total': 45.0}, {'description': 'Solid-Core Wire Harness Spool (50m)', 'quantity': 4, 'unit_price': 12.5, 'line_total': 50.0}], 'subtotal': 230.0, 'tax_amount': 19.55, 'total_amount': 249.55}",
+    "Attempt 3 Exception: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+    "Stage 3 Heuristic repair failed validation criteria."
+  ],
+  "status": "UNRESOLVED_DLQ"
+}

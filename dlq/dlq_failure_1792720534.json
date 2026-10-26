@@ -1,0 +1,11 @@
+{
+  "timestamp": 1792720534,
+  "raw_input_snippet": "======================================================================\nADVERSARIAL RECONCILIATION TEST CASE (RETRY STAGE 2 DEMO)\n======================================================================\n\nVENDOR: Precision Tooling & Fabrication LLC\nTAX ID: 45-8920192\nINVOICE NUMBER: INV-RECON-FAIL-01\nINVOICE DATE: 2024-10-14\nCURRENCY: USD\n\nDELIVERY SPECIFICATION:\n1. High-Tensile Steel Bearing Units | Qty: 2 | Unit Price: $50.00 | Total: $100.00\n2. Precision Ground Spacer Shims     | Qty: 4 | Unit Price: $12.50 | Total: $50.00\n\nLINE ITEMS SUB-TOTAL:   $ 150.00\nAPPLICABLE SALES TAX:   $  15.00\n======================================================================\nTOTAL INVOICE CHARGE:   $ 240.00  <-- FAILS RECONCILIATION CHECK (150 + 15 != 240)\n======================================================================\n\nNOTE: The billing clerk entered a manual shipping surcharge into the total\nwithout including the corresponding line item in the billing grid.",
+  "failed_payload": {},
+  "error_trace": [
+    "Stage 1 Ingestion Failure: Error code: 401 - {'error': {'message': 'Incorrect API key provided: AQ.Ab8RN*****************************************8fbQ. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}",
+    "Attempt 2 Exception: Error code: 401 - {'error': {'message': 'Incorrect API key provided: AQ.Ab8RN*****************************************8fbQ. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}",
+    "Attempt 3 Exception: Error code: 401 - {'error': {'message': 'Incorrect API key provided: AQ.Ab8RN*****************************************8fbQ. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+  ],
+  "status": "UNRESOLVED_DLQ"
+}
