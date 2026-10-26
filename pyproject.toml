@@ -10,6 +10,7 @@ requires-python = ">=3.11"
 dependencies = [
     "beautifulsoup4>=4.15.0",
     "fastapi>=0.161.1",
+    "google-genai>=2.33.0",
     "instructor>=1.17.0",
     "json-repair>=0.64.1",
     "openai>=3.3.0",

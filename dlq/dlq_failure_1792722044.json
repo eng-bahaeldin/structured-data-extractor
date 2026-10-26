@@ -1,0 +1,11 @@
+{
+  "timestamp": 1792722044,
+  "raw_input_snippet": "INVOICE #INV-2024-001\nVendor: Acme Supplies Ltd\nDate: 2024-10-15\nCurrency: USD\n\nLine Items:\n1. Industrial Ball Bearings | Qty: 2 | Unit Price: $50.00 | Total: $100.00\n2. Synthetic Lubricant       | Qty: 1 | Unit Price: $25.00 | Total: $25.00\n\nSubtotal: $125.00\nTax: $10.00\nTotal Due: $135.00",
+  "failed_payload": {},
+  "error_trace": [
+    "Stage 1 Ingestion Failure (GEMINI): Error code: 401 - [{'error': {'code': 401, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'UNAUTHENTICATED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'ACCESS_TOKEN_TYPE_UNSUPPORTED', 'metadata': {'method': 'google.ai.generativelanguage.v1main.GenerativeService.GenerateContent', 'service': 'generativelanguage.googleapis.com'}}]}}]",
+    "Attempt 2 Exception: Error code: 401 - [{'error': {'code': 401, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'UNAUTHENTICATED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'ACCESS_TOKEN_TYPE_UNSUPPORTED', 'metadata': {'method': 'google.ai.generativelanguage.v1main.GenerativeService.GenerateContent', 'service': 'generativelanguage.googleapis.com'}}]}}]",
+    "Attempt 3 Exception: Error code: 401 - [{'error': {'code': 401, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'UNAUTHENTICATED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'ACCESS_TOKEN_TYPE_UNSUPPORTED', 'metadata': {'method': 'google.ai.generativelanguage.v1main.GenerativeService.GenerateContent', 'service': 'generativelanguage.googleapis.com'}}]}}]"
+  ],
+  "status": "UNRESOLVED_DLQ"
+}

@@ -1,0 +1,11 @@
+{
+  "timestamp": 1792722905,
+  "raw_input_snippet": "INVOICE #INV-2026-001\nVendor: Apex Cloud Solutions LLC\nDate: October 15, 2026\nCurrency: $\n\nITEMS:\n1. Cloud Compute Dedicated Hours | Qty: 40 | Unit Price: $2.50 | Total: $100.00\n2. Enterprise NVMe Storage 1TB    | Qty: 1  | Unit Price: $25.00 | Total: $25.00\n\nSubtotal: $125.00\nTax Amount: $10.00\nTotal Due: $135.00",
+  "failed_payload": {},
+  "error_trace": [
+    "Stage 1 Validation Failure:\n\u2022 Location: [properties -> line_items -> items -> properties -> quantity -> exclusiveMinimum] | Issue: Extra inputs are not permitted | Provided Value: 0\n\u2022 Location: [properties -> line_items -> items -> properties -> unit_price -> exclusiveMinimum] | Issue: Extra inputs are not permitted | Provided Value: 0.0\n\u2022 Location: [properties -> line_items -> items -> properties -> line_total -> exclusiveMinimum] | Issue: Extra inputs are not permitted | Provided Value: 0.0\n\u2022 Location: [properties -> total_amount -> exclusiveMinimum] | Issue: Extra inputs are not permitted | Provided Value: 0.0",
+    "Attempt 2 Exception: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.0-flash is no longer available. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).', 'status': 'NOT_FOUND'}}",
+    "Attempt 3 Exception: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.0-flash is no longer available. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).', 'status': 'NOT_FOUND'}}"
+  ],
+  "status": "UNRESOLVED_DLQ"
+}

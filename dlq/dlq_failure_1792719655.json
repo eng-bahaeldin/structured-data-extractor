@@ -1,0 +1,11 @@
+{
+  "timestamp": 1792719655,
+  "raw_input_snippet": "ACME LOGISTICS INC.\n100 Industrial Parkway, Suite 400\nInvoice Number: INV-2024-9042\nDate: October 22, 2024\nCurrency: USD\n\nLINE ITEMS:\n1. Pallet Freight Shipping - Standard | Qty: 2 | Unit Price: $120.00 | Total: $240.00\n2. Hazardous Material Surcharge        | Qty: 1 | Unit Price: $45.00  | Total: $45.00\n3. Forklift Unloading Fee              | Qty: 1 | Unit Price: $35.00  | Total: $35.00\n\nSubtotal: $320.00\nTax Amount: $25.60\nTotal Due: $345.60",
+  "failed_payload": {},
+  "error_trace": [
+    "Stage 1 Ingestion Failure: Error code: 401 - {'error': {'message': 'Incorrect API key provided: AQ.Ab8RN*****************************************8fbQ. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}",
+    "Attempt 2 Exception: Error code: 401 - {'error': {'message': 'Incorrect API key provided: AQ.Ab8RN*****************************************8fbQ. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}",
+    "Attempt 3 Exception: Error code: 401 - {'error': {'message': 'Incorrect API key provided: AQ.Ab8RN*****************************************8fbQ. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+  ],
+  "status": "UNRESOLVED_DLQ"
+}
