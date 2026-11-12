@@ -43,18 +43,8 @@ with tab_extract:
         )
         selected_provider = "gemini" if "Gemini" in provider else "openai"
 
-        default_key = (
-            os.getenv("GEMINI_API_KEY", "")
-            if selected_provider == "gemini"
-            else os.getenv("OPENAI_API_KEY", "")
-        )
-
-        api_key = st.text_input(
-            f"{'Gemini' if selected_provider == 'gemini' else 'OpenAI'} API Key",
-            value=default_key,
-            type="password",
-            help="Get a free Gemini key from aistudio.google.com" if selected_provider == "gemini" else "",
-        )
+        api_key_env_var = "GEMINI_API_KEY" if selected_provider == "gemini" else "OPENAI_API_KEY"
+        api_key = os.getenv(api_key_env_var)
 
         enable_reflection = st.toggle("Enable Reflection Loop", value=True)
         max_retries = st.slider("Max Retries", min_value=1, max_value=5, value=3)
@@ -85,7 +75,7 @@ Total Due: $240.00
 
     if st.button("Run Extraction Pipeline", type="primary"):
         if not api_key:
-            st.error(f"Please provide your {selected_provider.upper()} API Key in the sidebar.")
+            st.error(f"Set the {api_key_env_var} environment variable to run extraction.")
         elif not input_data.strip():
             st.warning("Please enter text or click a sample edge case.")
         else:
