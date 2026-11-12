@@ -1,4 +1,4 @@
-# Enterprise Fault-Tolerant Structured Data Extractor
+# Enterprise Fault-Tolerant Unstructured Data Extractor
 
 [![Python Version](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/)
 [![Framework](https://img.shields.io/badge/Pydantic-v2-green.svg)](https://docs.pydantic.dev/latest/)
@@ -7,11 +7,12 @@
 
 A production-grade, fault-tolerant unstructured document extraction pipeline built with **Python 3.11**, **Pydantic v2**, and **LLM structured outputs**. The system parses messy invoices (PDF, HTML, raw OCR) into strictly typed JSON schemas using a 3-stage pipeline: **Constrained Decoding**, **Reflection Self-Healing Loop**, and **Dead-Letter Queue (DLQ) Fallback**.
 
-🔗 **Live Deployment:** [https://structured-data-extractor.streamlit.app/](https://structured-data-extractor.streamlit.app/)
+🔗 **Live Deployment:** [Live Demo](https://unstructured-data-extractor.streamlit.app/)
 
 ---
 
 ## Table of Contents
+
 - [1. System Architecture & Data Flow Diagram](#1-system-architecture--data-flow-diagram)
 - [2. Installation & Setup Guide](#2-installation--setup-guide)
 - [3. Schema Specification](#3-schema-specification)
@@ -49,3 +50,4 @@ flowchart TD
     J -- Yes --> K[Validated Object<br/>status: REPAIRED_VIA_REFLECTION]
     K --> F
     J -- No --> L[Dead-Letter Queue - DLQ<br/>status: DLQ_FAILED<br/>Persist to dlq_records/ with Full Error Trace]
+```
