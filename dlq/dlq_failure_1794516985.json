@@ -1,0 +1,11 @@
+{
+  "timestamp": 1794516985,
+  "raw_input_snippet": "\nbahaa@Bahaeldin UCRT64 /c/NSC/AD331/Assignments/multi-provider-llm-gateway (bahaeldin)\n$ ls\nai_prompt_log.md  pyproject.toml  README.md  src/  tests/  uv.lock\n\nbahaa@Bahaeldin UCRT64 /c/NSC/AD331/Assignments/multi-provider-llm-gateway (bahaeldin)\n$ cd ./..\n\nbahaa@Bahaeldin UCRT64 /c/NSC/AD331/Assignments\n$ ls\nmulti-provider-llm-gateway/  production-rag-pipeline/  structured-data-extractor/\n\nbahaa@Bahaeldin UCRT64 /c/NSC/AD331/Assignments\n$ cd structured-data-extractor/\n\nbahaa@Bahaeldin UCRT64 /c/NSC/AD331/Assignments/structured-data-extractor (bahaeldin)\n$ ls\nai_prompt_log.md  dlq/  pyproject.toml  README.md  samples/  src/  tests/  uv.lock\n\nbahaa@Bahaeldin UCRT64 /c/NSC/AD331/Assignments/structured-data-extractor (bahaeldin)\n$ uv run streamlit run src/app.py\n2026-11-12 10:43:53.758 Uvicorn server started on :::8501\n\n  You can now view your Streamlit app in your browser.\n\n  Local URL: http://localhost:8501\n  Network URL: http://172.20.10.4:8501\n\n  Stopping...",
+  "failed_payload": {},
+  "error_trace": [
+    "Stage 1 Ingestion Failure: 401 UNAUTHENTICATED. {'error': {'code': 401, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'UNAUTHENTICATED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'ACCESS_TOKEN_TYPE_UNSUPPORTED', 'metadata': {'method': 'google.ai.generativelanguage.v1beta.GenerativeService.GenerateContent', 'service': 'generativelanguage.googleapis.com'}}]}}",
+    "Attempt 2 API Error (401): API key not valid. Please pass a valid API key.",
+    "Attempt 3 API Error (401): API key not valid. Please pass a valid API key."
+  ],
+  "status": "UNRESOLVED_DLQ"
+}
